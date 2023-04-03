@@ -1,3 +1,91 @@
-.add-button::before {
-  content: "+";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+.container {
+  height: 100vh;
+  display: grid;
+  background-color: #fff1f2;
+  grid-template-areas:
+    "header"
+    "add-button"
+    "book-container";
+  grid-template-rows: min-content min-content 1fr;
+}
+
+.add-button {
+  grid-area: add-button;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: rgba(153, 145, 145, .5);
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.header {
+  grid-area: header;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.header h1 {
+  padding: 0.8%;
+  padding-left: 5%;
+}
+
+.books-container {
+  grid-area: book-container;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-rows: min-content;
+  overflow:auto;
+  margin: 30px;
+}
+
+.card {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card > * {
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  gap: 3px;
+}
+
+.remove {
+    padding: 5% 30%;
+    background-color: #999191;
+    border-radius: 10px;
+}
+
+.read {
+    padding: 5% 30%;
+    background-color: rgba(0, 214, 0, 0.3);
+    border-radius: 10px;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
 }
