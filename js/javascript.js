@@ -121,6 +121,10 @@ function switchReadBtn(node) {
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("read")) {
     switchReadBtn(e.target);
+    const bookIdCard =
+      e.target.parentNode.parentNode.querySelector(".idInfo").textContent;
+    const book = library.find((el) => el.id === bookIdCard);
+    book.switchReadBtn();
   }
   if (e.target.classList.contains("remove")) {
     e.target.parentNode.parentNode.remove();
