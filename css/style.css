@@ -22,10 +22,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-weight: bold;
 }
 
 .button:hover {
-  background-color: rgba(153, 145, 145, .5);
+  background-color: rgba(153, 145, 145, 0.5);
   padding: 1rem;
   border-radius: 10px;
   cursor: pointer;
@@ -33,6 +34,7 @@
 
 .header {
   grid-area: header;
+  font-weight: bold;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -50,7 +52,7 @@
   gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-template-rows: min-content;
-  overflow:auto;
+  overflow: auto;
   margin: 30px;
 }
 
@@ -68,24 +70,28 @@
   margin: 10px;
   display: flex;
   gap: 3px;
+  font-weight: bold;
 }
 
+.card > * > div {
+    font-weight: 400;
+}
 .remove {
-    padding: 5% 30%;
-    background-color: #999191;
-    border-radius: 10px;
+  padding: 5% 30%;
+  background-color: #999191;
+  border-radius: 10px;
 }
 
 .read {
-    padding: 5% 30%;
-    background-color: rgba(0, 214, 0, 0.3);
-    border-radius: 10px;
+  padding: 5% 30%;
+  background-color: rgba(0, 214, 0, 0.3);
+  border-radius: 10px;
 }
 
 .btns {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
 }
