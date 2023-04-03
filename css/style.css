@@ -6,6 +6,7 @@
 }
 
 .container {
+  position: relative;
   height: 100vh;
   display: grid;
   background-color: #fff1f2;
@@ -84,7 +85,6 @@
 
 .read {
   padding: 5% 30%;
-  background-color: rgba(0, 214, 0, 0.3);
   border-radius: 10px;
 }
 
@@ -94,4 +94,67 @@
   align-items: center;
   gap: 10px;
   cursor: pointer;
+}
+
+.book-form {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.6);
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    padding: 2%;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+form > * {
+    margin: 7px;
+}
+
+.answer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3px;
+}
+label {
+    display: flex;
+}
+
+.answer > * {
+    display: flex;
+    justify-content: space-between;
+}
+
+.close {
+    margin-top: 0px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.submit {
+    align-self: center;
+    
+}
+
+.hide {
+    display: none;
+}
+
+.red {
+    background-color: rgba(202, 49, 22, 0.8);
+}
+.green {
+    background-color: rgba(61, 181, 71, 0.8);
+}
+
+input {
+    border-radius: 10px;
 }
