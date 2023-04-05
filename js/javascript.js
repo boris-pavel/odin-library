@@ -6,7 +6,6 @@ const closeButton = document.querySelector(".close");
 const bookForm = document.querySelector(".book-form");
 const submitForm = document.querySelector('button[type="submit"');
 
-
 function displayCard(book) {
   const card = document.createElement("div");
   card.classList.add("card");
@@ -60,20 +59,22 @@ function addBookToLibrary(book) {
   library.push(book);
   displayCard(book);
 }
-function Book(title, author, pages, status) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.status = status;
-  this.id = bookId;
-  bookId += 1;
-}
+class Book {
+  constructor(title, author, pages, status) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.status = status;
+    this.id = bookId;
+    bookId += 1;
+  }
 
-Book.prototype.switchReadBtn = function () {
-  if (this.status) {
-    this.status = false;
-  } else this.status = true;
-};
+  switchReadBtn() {
+    if (this.status) {
+      this.status = false;
+    } else this.status = true;
+  }
+}
 
 addButton.addEventListener("click", () => {
   bookForm.classList.toggle("hide");
@@ -131,6 +132,6 @@ document.addEventListener("click", (e) => {
     const bookIdCard =
       e.target.parentNode.parentNode.querySelector(".idInfo").textContent;
     const index = library.findIndex((el) => el.id === bookIdCard);
-    library.splice(index,1);
+    library.splice(index, 1);
   }
 });
